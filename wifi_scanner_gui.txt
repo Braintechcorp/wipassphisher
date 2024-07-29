@@ -1,0 +1,66 @@
+import subprocess
+import tkinter as tk
+from tkinter import scrolledtext
+
+def get_known_networks():
+    # Execute the netsh command to get a list of known Wi-Fi networks
+    command = ["netsh", "wlan", "show", "profiles"]
+    result = subprocess.run(command, capture_output=True, text=True)
+    return result.stdout
+
+def get_wifi_password(profile_name):
+    # Execute the netsh command to get the Wi-Fi password for a specific profile
+    command = ["netsh", "wlan", "show", "profile", profile_name, "key=clear"]
+    result = subprocess.run(command, capture_output=True, text=True)
+    return result.stdout
+
+def parse_networks(network_data):
+    # Parse the output to extract network names
+    profiles = []
+    for line in network_data.split('\n'):
+        if "All User Profile" in line:
+            profile_name = line.split(":")[1].strip()
+            profiles.append(profile_name)
+    return profiles
+
+def get_password_from_profile(profile_data):
+    # Extract the password from the profile data
+    for line in profile_data.split('\n'):
+        if "Key Content" in line:
+            password = line.split(":")[1].strip()
+            return password
+    return None
+
+def display_networks_with_passwords():
+    try:
+        network_data = get_known_networks()
+        profiles = parse_networks(network_data)
+        result_text.delete('1.0', tk.END)  # Clear previous content
+        result_text.insert(tk.INSERT, "Previously Used Wi-Fi Networks with Passwords:\n")
+        for profile in profiles:
+            profile_data = get_wifi_password(profile)
+            password = get_password_from_profile(profile_data)
+            if password:
+                result_text.insert(tk.INSERT, f"- {profile}: {password}\n")
+            else:
+                result_text.insert(tk.INSERT, f"- {profile}: No password found\n")
+    except Exception as e:
+        result_text.insert(tk.INSERT, f"An error occurred: {str(e)}\n")
+
+# Create the main window
+root = tk.Tk()
+root.title("Wi-Fi Scanner")
+root.geometry("500x400")
+root.configure(bg='black')
+
+
+# Create a button to start the scanning process
+scan_button = tk.Button(root, text="Scan for Wi-Fi Networks", command=display_networks_with_passwords,bg='black', fg='white')
+scan_button.pack(pady=10)
+
+# Create a scrolled text widget to display results
+result_text = scrolledtext.ScrolledText(root, width=60, height=20)
+result_text.pack(pady=10)
+
+# Run the application
+root.mainloop()
