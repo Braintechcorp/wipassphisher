@@ -7,6 +7,10 @@ This is a windows tool for scanning and revealing passwords of previously connec
 
 
 
+
+[eb7789fc-1bd6-497e-a473-22dcc942241d.webm](https://github.com/user-attachments/assets/99549b70-e47f-4925-9330-ec39924e02f2)
+
+
 ![WhatsApp Image 2024-07-30 at 11 40 08 AM](https://github.com/user-attachments/assets/4f89d001-914c-477e-9e37-641c4176dc50)
 
 
