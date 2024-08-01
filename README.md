@@ -9,7 +9,7 @@ This is a windows tool for scanning and revealing passwords of previously connec
 
 
 
-https://github.com/user-attachments/assets/5b788706-b845-439c-9f42-df5d0f4a5bfc
+https://github.com/user-attachments/assets/745a4f5c-278f-4155-ac27-596436dd40a6
 
 
 
