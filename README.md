@@ -10,8 +10,6 @@ This is a windows tool for scanning and revealing passwords of previously connec
 https://www.mediafire.com/file/hfpwc9qk56565d1/How_to_Download_and_use_wipassphisher_%25281%2529.mp4/file 
 
 
-https://github.com/user-attachments/assets/9fa26fb3-5125-4a3e-98e5-b3b8e7e1e722
-
 
 
 ![WhatsApp Image 2024-07-30 at 11 40 08 AM](https://github.com/user-attachments/assets/4f89d001-914c-477e-9e37-641c4176dc50)
