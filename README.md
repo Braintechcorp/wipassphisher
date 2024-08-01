@@ -6,7 +6,14 @@ This is a windows tool for scanning and revealing passwords of previously connec
 4. Turn on antivirus and then launch the tool
 
 
+
+
+
+
 https://www.mediafire.com/file/hfpwc9qk56565d1/How_to_Download_and_use_wipassphisher_%25281%2529.mp4/file 
+
+
+
 
 
 
