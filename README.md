@@ -7,7 +7,11 @@ This is a windows tool for scanning and revealing passwords of previously connec
 
 
 
-https://www.mediafire.com/file/hfpwc9qk56565d1/How_to_Download_and_use_wipassphisher_%25281%2529.mp4/file 
+
+
+https://github.com/user-attachments/assets/5b788706-b845-439c-9f42-df5d0f4a5bfc
+
+
 
 
 
